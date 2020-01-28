@@ -26,10 +26,10 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav w-100">
                         <li class="nav-item ">
-                            <a class="nav-link" href="user.html">User</a>
+                            <a class="nav-link" href="#"routerLink="/student" >Student</a>
                         </li>
                         <li class="nav-item active">
-                            <a class="nav-link" href="courses.html">Courses</a>
+                            <a class="nav-link" href="#" routerLink="/course">Courses</a>
                         </li>
                         <li class="nav-item dropdown  ml-lg-auto">
                             <a class="nav-link dropdown-toggle" href="#" id="login_user_action" role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -39,7 +39,7 @@
                             </a>
                             <div class="dropdown-menu login_user_action" aria-labelledby="login_user_action">
                                 <a class="dropdown-item" href="#">Change Password</a>
-                                <a class="dropdown-item" href="signin.html">Logout</a>
+                                <a class="dropdown-item" href="#" routerLink="/signin">Logout</a>
 
                             </div>
                         </li>
@@ -174,16 +174,7 @@
     </footer>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>
-            $(document).ready(function(){
-                $(".delete_record").click( function(){
-                       if (confirm("Are you sure you want to delete this?")) {
-                        // your deletion code
-                    }
-                    return false;
-                });
-            });
-            </script>
+  
 </body>
 
 </html>
