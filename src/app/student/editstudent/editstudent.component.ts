@@ -9,10 +9,16 @@ import { FormBuilder, FormGroup, FormArray, Validators } from "@angular/forms";
 })
 export class EditstudentComponent implements OnInit {
 
-constructor(private router:Router){}
-
+constructor(private router:Router,private formBuilder:FormBuilder){}
+editStudentFormGroup:FormGroup;
 
   ngOnInit() {
+this.editStudentFormGroup=this.formBuilder.group([
+  id:['',Validators.required],
+  Name:['',Validators.required],
+  emailId:['',Validators.required],
+  password:['',Validators.required],
+])
   } 
 
-}
+} 

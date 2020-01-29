@@ -9,7 +9,7 @@ import {Router} from '@angular/router';
 export class StudentComponent implements OnInit {
 
  constructor(private router:Router){}
-
+ 
  students=[
    {id:1,Name:"bob",emailId:"bob@gmail.com",password:"123"},
    {id:2,Name:"alice",emailId:"alice@gmail.com",password:"456"},
