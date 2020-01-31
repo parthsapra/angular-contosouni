@@ -32,6 +32,9 @@ this.editStudentFormGroup=this.formBuilder.group({
   editStudent(){
    // console.log(this.editStudentFormGroup);
 // console.log(this.student);
+for (var i=0;i<this.student.length;i++){
+  console.log()
+}
   }
 
 } 
