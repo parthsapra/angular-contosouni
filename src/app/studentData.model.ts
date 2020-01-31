@@ -1,6 +1,6 @@
 export const StudentData=[
-  {id:""},
-  {name:"jery"},
-  {emailId:""},
-  {password:""}
+  {id:"1",
+  name:"bob",
+  emailId:"bob@gmail.com ",
+ password:"1234"}
 ]

@@ -18,7 +18,7 @@ console.log(this.student);
 
     this.editStudentFormGroup = this.formBuilder.group({
       id: ["", Validators.required],
-      Name: ["", Validators.required],
+      name: ["", Validators.required],
       emailId: ["", Validators.required],
       password: ["", Validators.required]
     });
@@ -26,6 +26,9 @@ console.log(this.student);
 
 editStudent(){
   
+  this.student.push(this.editStudentFormGroup.value);
+  console.log(this.student);
+  this.router.navigateByUrl("/student");
 }
 
 }

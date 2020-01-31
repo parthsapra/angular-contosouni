@@ -71,7 +71,7 @@
                             <tbody *ngFor="let studentRecord of students">
                               <tr>
                                 <td>{{studentRecord.id}}</td>
-                                <td>{{studentRecord.Name}}</td>
+                                <td>{{studentRecord.name}}</td>
                                 <td>{{studentRecord.emailId}}</td>
                                 <td>{{studentRecord.password}}</td>
                                 <td class="text-right"><a href="" [routerLink]="['/student', studentRecord.id]" class="mx-2" title="Edit">Edit</a>|
