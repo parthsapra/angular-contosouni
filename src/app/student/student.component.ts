@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {StudentData} from './student-data.model'
+import {StudentData} from '../studentData.model'
 @Component({
   selector: 'app-student',
   templateUrl: './student.component.html',
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit {
-
+student=StudentData;
  constructor(private router:Router){}
  
  students=[
@@ -18,6 +18,7 @@ export class StudentComponent implements OnInit {
  ]
 
   ngOnInit() {
+   // console.log(this.student);
   }
 
 }

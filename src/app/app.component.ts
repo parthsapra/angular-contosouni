@@ -8,3 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent  {
   name = 'Angular';
 }
+export const StudentData=[
+  {id:"78",
+  name:"jery",
+  emailId:"",
+  password:""}
+]

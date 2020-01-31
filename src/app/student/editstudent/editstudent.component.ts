@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 import {Router} from '@angular/router';
 import { FormBuilder, FormGroup, FormArray, Validators } from "@angular/forms";
-import {EditStudent} from './editstudent.model';
-import {StudentData} from './student-data.model'
+import {StudentData} from '../app.component'
 
 @Component({
   selector: 'app-editstudent',
@@ -10,8 +9,10 @@ import {StudentData} from './student-data.model'
   styleUrls: ['./editstudent.component.css']
 })
 export class EditstudentComponent implements OnInit {
-user:EditStudent=new EditStudent();
-student=StudentData;
+
+// @Input() student:any;
+
+// student=StudentData;
 constructor(private router:Router,private formBuilder:FormBuilder){}
 editStudentFormGroup:FormGroup;
 
@@ -26,7 +27,7 @@ this.editStudentFormGroup=this.formBuilder.group({
 
   editStudent(){
     console.log(this.editStudentFormGroup);
-console.log(this.student.length);
+console.log(this.student);
   }
 
 } 
