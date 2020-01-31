@@ -1,3 +1,6 @@
 export class EditStudent{
-  firstName:string;
+  id:number;
+  Name:string;
+  emailId:string;
+  password:string;
 }
