@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import { FormBuilder, FormGroup, FormArray, Validators } from "@angular/forms";
 import {EditStudent} from './editstudent.model';
+import {StudentData} from './student-data.model'
+
 @Component({
   selector: 'app-editstudent',
   templateUrl: './editstudent.component.html',
@@ -9,6 +11,7 @@ import {EditStudent} from './editstudent.model';
 })
 export class EditstudentComponent implements OnInit {
 user:EditStudent=new EditStudent();
+student=StudentData;
 constructor(private router:Router,private formBuilder:FormBuilder){}
 editStudentFormGroup:FormGroup;
 
@@ -22,7 +25,8 @@ this.editStudentFormGroup=this.formBuilder.group({
   } ;
 
   editStudent(){
-    console.log(this.editStudentFormGroup)
+    console.log(this.editStudentFormGroup);
+console.log(this.student.length);
   }
 
 } 
