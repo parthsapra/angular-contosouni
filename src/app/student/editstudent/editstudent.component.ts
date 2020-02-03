@@ -29,7 +29,7 @@ export class EditstudentComponent implements OnInit {
     this.index = this.id - 1;
     console.log(this.index);
     // this.name=this.activatedRouter.snapshot.paramMap.get("name");
-    //let  item=StudentData.filter(f=> f.id==this.id[0]  );
+    let  item=StudentData.filter(t=> t.id==this.id )[0];
     this.editStudentFormGroup = this.formBuilder.group({
       id: [this.id, Validators.required],
       name: [this.student[this.index].name, Validators.required],
