@@ -39,10 +39,11 @@ export class EditstudentComponent implements OnInit {
   }
 
   editStudent() {
-    // console.log(this.editStudentFormGroup);
-    // console.log(this.student);
-    for (var i = 0; i < this.student.length; i++) {
-      console.log();
-    }
+    console.log(this.editStudentFormGroup.value);
+   this.student[this.index].name=this.editStudentFormGroup.controls.name.value;
+   this.student[this.index].emailId=this.editStudentFormGroup.controls.emailId.value;
+   this.student[this.index].password=this.editStudentFormGroup.controls.password.value;
+   this.router.navigateByUrl('student');
+    // this.student.
   }
 }
