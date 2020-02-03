@@ -7,7 +7,6 @@ import {StudentData} from '../studentData.model'
   styleUrls: ['./student.component.css']
 })
 export class StudentComponent implements OnInit {
-  @Input() 
 students=StudentData;
  constructor(private router:Router){}
  

@@ -9,6 +9,7 @@ import { Router } from "@angular/router";
 })
 export class AddStudentComponent implements OnInit {
   student = StudentData;
+  getId = this.student.length+1;
   constructor(private router: Router, private formBuilder: FormBuilder) {}
   editStudentFormGroup: FormGroup;
   
@@ -17,7 +18,7 @@ export class AddStudentComponent implements OnInit {
 console.log(this.student);
 
     this.editStudentFormGroup = this.formBuilder.group({
-      id: ["", Validators.required],
+      id: [this.getId, Validators.required],
       name: ["", Validators.required],
       emailId: ["", Validators.required],
       password: ["", Validators.required]
