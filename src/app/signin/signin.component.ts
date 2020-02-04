@@ -26,15 +26,15 @@ students=[
   }
 
   signIn() {
-    var check:Boolean=false;
-    for(var i=0;i<this.students.length;i++){
-    if(this.studentFormGroup.value.email==this.students[i].emailId && this.studentFormGroup.value.password==this.students[i].password)
-    {
+//     var check:Boolean=false;
+//     for(var i=0;i<this.students.length;i++){
+//     if(this.studentFormGroup.value.email==this.students[i].emailId && this.studentFormGroup.value.password==this.students[i].password)
+//     {
       this.router.navigateByUrl('/student');
-      check=true;
-break;
-    }
-  }
-  if(check==false){alert("Invalid Email or Password!!");}
+//       check=true;
+// break;
+//     }
+//   }
+//   if(check==false){alert("Invalid Email or Password!!");}
 }
 }

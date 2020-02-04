@@ -75,7 +75,7 @@
                                 <td>{{studentRecord.emailId}}</td>
                                 <td>{{studentRecord.password}}</td>
                                 <td class="text-right"><a href="" [routerLink]="['/student', studentRecord.id]" class="mx-2" title="Edit">Edit</a>|
-                                    <a href="" class="mx-2 text-danger delete_record"  title="Delete">Delete</a></td>
+                                    <button class="mx-2 text-danger delete_record" (click)="deleteStudent(studentRecord.id)" title="Delete">Delete</button></td>
                               </tr>
                             </tbody>
                           </table>
