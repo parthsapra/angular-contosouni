@@ -42,23 +42,23 @@ export class EditstudentComponent implements OnInit {
   editStudent() {
     // console.log(this.editStudentFormGroup.value);
     // //using indexOf
-    let item = StudentData.filter(t => t.id == this.id)[0];
+    // let item = StudentData.filter(t => t.id == this.id)[0];
 
     // item=this.editStudentFormGroup.value;
-    console.log(this.id);
-    console.log(StudentData.indexOf(this.id));
-    StudentData[this.id - 1] = {
-      id: this.editStudentFormGroup.controls.id.value,
-      name: this.editStudentFormGroup.controls.name.value,
-      emailId: this.editStudentFormGroup.controls.emailId.value,
-      password: this.editStudentFormGroup.controls.password.value
-    };
+    // console.log(this.id);
+    // console.log(StudentData.indexOf(this.id));
+    // StudentData[this.id - 1] = {
+    // id: this.editStudentFormGroup.controls.id.value,
+    // name: this.editStudentFormGroup.controls.name.value,
+    // emailId: this.editStudentFormGroup.controls.emailId.value,
+    // password: this.editStudentFormGroup.controls.password.value
+    // };
     // console.log(item);
     //working below
-    // let item = StudentData.filter(t => t.id == this.id)[0];
-    // item.name = this.editStudentFormGroup.controls.name.value;
-    // item.emailId = this.editStudentFormGroup.controls.emailId.value;
-    // item.password = this.editStudentFormGroup.controls.password.value;
+    let item = StudentData.filter(t => t.id == this.id)[0];
+    item.name = this.editStudentFormGroup.controls.name.value;
+    item.emailId = this.editStudentFormGroup.controls.emailId.value;
+    item.password = this.editStudentFormGroup.controls.password.value;
     this.router.navigateByUrl("student");
     // this.student.
   }
