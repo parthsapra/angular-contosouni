@@ -24,9 +24,13 @@ export class StudentComponent implements OnInit {
     // console.log(this.id);
   }
   deleteStudent(getId) {
-    this.id = getId-1;
-    let removed=StudentData.splice(this.id,1);
+    // this.id = getId;
+    const studdentID = this.students.findIndex(i => i.id == getId);
 
-    console.log(this.id);
+    if (studdentID !== -1) {
+      this.students.splice(studdentID, 1);
+      alert("ID" + getId + " will be deleted!!");
+      // console.log(this.students[getId]);
+    }
   }
 }
