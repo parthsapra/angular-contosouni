@@ -26,24 +26,28 @@ export class EditstudentComponent implements OnInit {
   // name:string;
   ngOnInit() {
     this.id = this.activatedRouter.snapshot.paramMap.get("id");
-    this.index = this.id - 1;
-    console.log(this.index);
+    //    console.log(this.index);
     // this.name=this.activatedRouter.snapshot.paramMap.get("name");
-    let  item=StudentData.filter(t=> t.id==this.id )[0];
+    let item = StudentData.filter(t => t.id == this.id)[0];
+
+    console.log(item);
     this.editStudentFormGroup = this.formBuilder.group({
-      id: [this.id, Validators.required],
-      name: [this.student[this.index].name, Validators.required],
-      emailId: [this.student[this.index].emailId, Validators.required],
-      password: [this.student[this.index].password, Validators.required]
+      id: [item.id, Validators.required],
+      name: [item.name, Validators.required],
+      emailId: [item.emailId, Validators.required],
+      password: [item.password, Validators.required]
     });
   }
 
   editStudent() {
     console.log(this.editStudentFormGroup.value);
-   this.student[this.index].name=this.editStudentFormGroup.controls.name.value;
-   this.student[this.index].emailId=this.editStudentFormGroup.controls.emailId.value;
-   this.student[this.index].password=this.editStudentFormGroup.controls.password.value;
-   this.router.navigateByUrl('student');
+    //using indexOf
+
+    //working below
+    this.student[this.index].name = this.editStudentFormGroup.controls.name.value;
+    this.student[this.index].emailId = this.editStudentFormGroup.controls.emailId.value;
+    this.student[this.index].password = this.editStudentFormGroup.controls.password.value;
+    this.router.navigateByUrl("student");
     // this.student.
   }
 }
